@@ -125,7 +125,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Battle.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Overworld.cpp" />
+    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="ScreenGame.cpp" />
+    <ClCompile Include="ScreenManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Battle.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Overworld.h" />
+    <ClInclude Include="Screen.h" />
+    <ClInclude Include="ScreenGame.h" />
+    <ClInclude Include="ScreenManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

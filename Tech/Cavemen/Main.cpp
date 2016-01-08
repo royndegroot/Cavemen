@@ -1,19 +1,11 @@
 #include <SFML/Graphics.hpp>
 
+#include "ScreenManager.h"
+
 int main() {
 	sf::RenderWindow window( sf::VideoMode( 800, 480 ), "Cavemen" );
 	sf::CircleShape shape( 100.f );
 	shape.setFillColor( sf::Color::Green );
-
-	sf::Texture texture;
-	if ( !texture.loadFromFile( "Images/logo-cavemen.png" ) ) {
-		// Handle failure
-	}
-
-	sf::Sprite sprite;
-	sf::FloatRect bounds = sprite.getGlobalBounds();
-	sprite.setPosition( (800 - 392) * 0.5f, (480 - 128) * 0.5f );
-	sprite.setTexture( texture );
 
 	while ( window.isOpen() ) {
 		sf::Event event;
@@ -24,7 +16,7 @@ int main() {
 		}
 
 		window.clear();
-		window.draw( sprite );
+		ScreenManager::instance().update( &window );
 		window.display();
 	}
 
